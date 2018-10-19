@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+	<div class="content">
+			{% if prediction is defined %}
+                Is a {{ prediction }}.
+			{% else %}
+				Please fill out the form below!
+			{% endif %}
+	</div>
+
+	<div class="content" style="margin-top: 20px;">
+		<form method="POST">
+
+			{{ form.param1.label }} {{ form.param1() }}
+			<br>
+			{{ form.param2.label }} {{ form.param2() }}
+			<br>
+			{{ form.param3.label }} {{ form.param3() }}
+			<br>
+			{{ form.param4.label }} {{ form.param4() }}
+			<br>
+			<br>
+			{{ form.submit() }}
+		</form>
+	</div>
+</body>
+</html>
