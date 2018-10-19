@@ -88,7 +88,7 @@ def clasificar(prediction=None):
         flower_instance = [[sepal_length, sepal_width, petal_length, petal_width]]
         print(flower_instance)
 
-        ml_model = joblib.load('./model.pkl')
+        ml_model = joblib.load('model.pkl')
         prediction = ml_model.predict(flower_instance)
 
     return render_template('home.html', form=form, prediction=prediction)
