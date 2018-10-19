@@ -50,7 +50,7 @@ mkl-fft==1.0.6
 mkl-random==1.0.1
 nbconvert==5.3.1
 nbformat==4.4.0
-numpy==1.15.1
+numpy==1.15.2
 numpydoc==0.8.0
 olefile==0.46
 packaging==17.1
