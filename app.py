@@ -53,12 +53,12 @@ def build():
     random_state = 7
 
     # entradas de pruebas y validacion
-    x_train, x_validation, y_train, y_validation = model_selection.train_test_split(X, Y, test_size=validation_size,
+    X_train, x_validation, Y_train, y_validation = model_selection.train_test_split(X, Y, test_size=validation_size,
                                                                                     random_state=random_state)
     # algoritmo K-nearest a entrenar
     k = 3
     knn = KNeighborsClassifier(n_neighbors=k)
-    knn.fit(x_train, y_train)
+    knn.fit(X_train, Y_train)
     predictions = knn.predict(x_validation)
 
     # dtos estadisticos
