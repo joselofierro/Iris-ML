@@ -15,7 +15,7 @@ from sklearn.externals import joblib
 # Inicilizando la app Flask
 app = Flask(__name__)
 ###################################
-app.config['UPLOADED_PHOTOS_DEST'] = '/home/chuky97/PycharmProjects/DataScience/static/img'
+app.config['UPLOADED_PHOTOS_DEST'] = 'static/img/'
 photo = UploadSet('photos', IMAGES)
 configure_uploads(app, photo)
 
