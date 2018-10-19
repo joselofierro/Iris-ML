@@ -88,24 +88,11 @@ def clasificar(prediction=None):
         flower_instance = [[sepal_length, sepal_width, petal_length, petal_width]]
         print(flower_instance)
 
-        ml_model = joblib.load('/home/chuky97/PycharmProjects/DataScience/model.pkl')
+        ml_model = joblib.load('./model.pkl')
         prediction = ml_model.predict(flower_instance)
 
     return render_template('home.html', form=form, prediction=prediction)
 
-
-@app.route('/clasificar/<float:sl>/<float:sw>/<float:pl>/<float:pw>', methods=['GET'])
-def clasificacion(sl, sw, pl, pw):
-    if request.method == 'GET':
-        sepal_length = sl
-        sepal_width = sw
-        petal_length = pl
-        petal_width = pw
-
-        caracteristicas = [[sepal_length, sepal_width, petal_length, petal_width]]
-        ml_model = joblib.load('/home/chuky97/PycharmProjects/DataScience/model.pkl')
-        prediction = ml_model.predict(caracteristicas)
-        return jsonify({'prediction': list(prediction)})
 
 
 @app.route('/upload', methods=['POST', 'GET'])
