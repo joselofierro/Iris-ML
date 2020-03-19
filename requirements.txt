@@ -81,7 +81,7 @@ pyzmq==17.1.0
 QtAwesome==0.4.4
 qtconsole==4.3.1
 QtPy==1.4.2
-requests==2.19.1
+requests==2.20.0
 scikit-learn==0.20.0
 scipy==1.1.0
 SecretStorage==3.0.1
