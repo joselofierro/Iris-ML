@@ -100,6 +100,6 @@ typed-ast==1.1.0
 urllib3==1.24.2
 wcwidth==0.1.7
 webencodings==0.5.1
-Werkzeug==0.14.1
+Werkzeug==2.2.3
 wrapt==1.10.11
 WTForms==2.2.1
